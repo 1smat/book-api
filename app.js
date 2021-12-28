@@ -5,11 +5,15 @@ const port = 3000
 let books = require('./books')
 
 app.get('/', (req, res) => {
-  let book = books.array.map(() => {})
-  res.send(`<h1> ${book} </h1> `)
+  let book = books.array.map((book) => {
+    res.send(`
+      <h2> ${book.class} </h2>
+      <h1> ${book.name} </h1> 
+    `)
+    console.log(book)
+  })
 
   // console.log(typeof books)
-  console.log(books.array)
 })
 
 // const returnName = (book) => {
