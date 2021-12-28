@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "fake book api",
   "main": "app.js",
+  "type": "commonjs",
   "scripts": {
     "dev": "nodemon app.js",
     "start": "node app.js"
