@@ -7,4 +7,8 @@ exports.array = [
     name: 'Fizika',
     class: 5,
   },
+  {
+    name: 'Tarix',
+    class: '5'
+  }
 ]
