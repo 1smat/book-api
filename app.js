@@ -1,7 +1,12 @@
 const express = require('express')
+const { restart } = require('nodemon')
 const app = express()
 const port = 3000
 let books = require('./books')
+
+// api middlewares
+app.use(express.json())
+app.use(express.urlencoded())
 
 app.get('/', (req, res) => {
   res.statusCode = 200
@@ -9,6 +14,14 @@ app.get('/', (req, res) => {
   res.send(books)
   res.end()
 })
+
+app.post('/add', function (req, res) {
+  res.status(200).json('Sended')
+  // console.log(JSON.stringify(req.body))
+  console.log(req.query)
+  console.log(req.body)
+})
+
 // let book = books.array.map((book) => {
 //   res.write(`
 //     <h2> ${book.class} </h2>
